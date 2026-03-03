@@ -60,7 +60,7 @@ export PROJECT_ID=$DEVSHELL_PROJECT_ID
 
 echo
 echo -e "${COLOR_MAGENTA}${STYLE_BOLD} >>-- 📊 Creating custom logging metric for responses --<< ${FORMAT_RESET}"
-gcloud logging metrics create 200responses --description="subscribe to techcps" --log-filter='resource.type="gae_app" AND resource.labels.module_id="default" AND (protoPayload.status=200 OR httpRequest.status=200)'
+gcloud logging metrics create 200responses --description="subscribe to arcadecrewx" --log-filter='resource.type="gae_app" AND resource.labels.module_id="default" AND (protoPayload.status=200 OR httpRequest.status=200)'
 
 echo
 echo -e "${COLOR_BLUE}${STYLE_BOLD} >>-- ⏱️  Preparing latency distribution configuration --<< ${FORMAT_RESET}"
@@ -106,7 +106,7 @@ curl -X POST \
 
 echo
 echo -e "${COLOR_CYAN}${STYLE_BOLD} >>-- 💻 Launching compute instance with web server --<< ${FORMAT_RESET}"
-gcloud compute instances create techcps --zone=$ZONE --project=$DEVSHELL_PROJECT_ID --machine-type=e2-micro --image-family=debian-11 --image-project=debian-cloud --tags=http-server --metadata=startup-script='#!/bin/bash sudo apt update && sudo apt install -y apache2 && sudo systemctl start apache2' --scopes=https://www.googleapis.com/auth/cloud-platform --labels=env=lab --quiet
+gcloud compute instances create arcadecrewx --zone=$ZONE --project=$DEVSHELL_PROJECT_ID --machine-type=e2-micro --image-family=debian-11 --image-project=debian-cloud --tags=http-server --metadata=startup-script='#!/bin/bash sudo apt update && sudo apt install -y apache2 && sudo systemctl start apache2' --scopes=https://www.googleapis.com/auth/cloud-platform --labels=env=lab --quiet
 
 echo
 echo -e "${COLOR_YELLOW}${STYLE_BOLD} >>-- 📝 Creating BigQuery sink for audit logs --<< ${FORMAT_RESET}"
