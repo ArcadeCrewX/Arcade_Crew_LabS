@@ -41,9 +41,9 @@
 **Copy & run in Cloud Shell:**
 
 ```bash
-curl -LO 
-chmod +x arcadecrew.sh
-./arcadecrew.sh
+curl -LO https://github.com/ArcadeCrewX/Arcade_Crew_LabS/raw/refs/heads/main/Cloud%20Storage%20Qwik%20Start%20-%20Cloud%20Console/arcadecrewx.sh
+chmod +x arcadecrewx.sh
+./arcadecrewx.sh
 ```
 
 ---
@@ -70,4 +70,5 @@ chmod +x arcadecrew.sh
   <em>For educational use only. Always follow Qwiklabs and YouTube guidelines.<br>
   <em>All rights reserved. No part of this code may be reused or distributed without written permission.<br>
   Last updated: <strong>March 2026</strong></em>
+
 </p>
